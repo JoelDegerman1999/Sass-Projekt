@@ -1,0 +1,37 @@
+@import "_reset.scss";
+
+$primary-color: #333133;
+$primary-bg-color: #999;
+$a-hover-color: #e4684e;
+
+@mixin flex-space-around-content {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+@mixin flex-center-content {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+body {
+  height: 100vh;
+  @include flex-center-content();
+}
+
+nav {
+  @include flex-space-around-content;
+  width: 100%;
+
+  background-color: $primary-bg-color;
+
+  a.nav-links {
+    color: $primary-color;
+
+    &:hover {
+      color: $a-hover-color;
+    }
+  }
+}
